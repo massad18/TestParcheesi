@@ -60,9 +60,7 @@ public class CounterHumanPlayer extends GameHumanPlayer implements OnClickListen
 	 */
 	protected void updateDisplay() {
 		// set the text in the appropriate widget
-		counterValueTextView.setText("" + state.getCounter());
 	}
-
 	/**
 	 * this method gets called when the user clicks the '+' or '-' button. It
 	 * creates a new CounterMoveAction to return to the parent activity.
@@ -124,10 +122,6 @@ public class CounterHumanPlayer extends GameHumanPlayer implements OnClickListen
 		activity.setContentView(R.layout.counter_human_player);
 		
 		// make this object the listener for both the '+' and '-' 'buttons
-		Button plusButton = (Button) activity.findViewById(R.id.plusButton);
-		plusButton.setOnClickListener(this);
-		Button minusButton = (Button) activity.findViewById(R.id.minusButton);
-		minusButton.setOnClickListener(this);
 
 		// remember the field that we update to display the counter's value
 		this.counterValueTextView =
